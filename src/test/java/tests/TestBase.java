@@ -14,10 +14,11 @@ public class TestBase {
     @BeforeAll
     static void setup() {
         addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
-        Configuration.startMaximized = true;
         Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.startMaximized = true;
 
-        if(System.getProperty("remote_driver") != null) {
+
+        if (System.getProperty("remote_driver") != null) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
@@ -31,7 +32,7 @@ public class TestBase {
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console logs", getConsoleLogs());
-        if(System.getProperty("video_storage") != null)
+        if (System.getProperty("video_storage") != null)
             attachVideo();
         closeWebDriver();
     }
