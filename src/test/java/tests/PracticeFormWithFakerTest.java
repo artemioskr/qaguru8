@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class PracticeFormWithFakerTest extends TestBase{
+public class PracticeFormWithFakerTest extends TestBase {
 
     @Test
     public void fillFieldsPracticeForm() {
