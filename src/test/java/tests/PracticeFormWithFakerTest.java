@@ -63,4 +63,10 @@ public class PracticeFormWithFakerTest extends TestBase {
         $(".table-responsive").shouldHave(text(address));
         $(".table-responsive").shouldHave(text(state + " " + city));
     }
+
+    @Test
+    public void negativeTest() {
+        open("https://demoqa.com/automation-practice-form");
+        $(".main-header").shouldHave(text("Pract234ice Form"));
+    }
 }
